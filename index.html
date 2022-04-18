@@ -74,10 +74,10 @@
                 }
 
             .breadcrumb li a {
-                color: #8a6473;
+                color: #64768a;
                 text-decoration: none;
                 padding: 5px 0px 5px 40px;
-                background: #ffffff;
+                background: #dcdfdd;
                 position: relative;
                 display: block;
                 float: left;
@@ -89,7 +89,7 @@
                 height: 0;
                 border-top: 50px solid transparent;
                 border-bottom: 50px solid transparent;
-                border-left: 30px solid #ffffff;
+                border-left: 30px solid #dcdfdd;
                 position: absolute;
                 top: 50%;
                 margin-top: -50px;
@@ -104,7 +104,7 @@
                 height: 0;
                 border-top: 50px solid transparent;
                 border-bottom: 50px solid transparent;
-                border-left: 30px solid #d7dade;
+                border-left: 30px solid white;
                 position: absolute;
                 top: 50%;
                 margin-top: -50px;
@@ -115,42 +115,48 @@
 
             .breadcrumb li:first-child a {
                 padding-left: 20px;
+               
                 }
             
+            
             .breadcrumb li:last-child a {
-                background: #eff4f7;
+                background: #dfdcdc;
                 color: #64768a;
                 cursor: default;
                 }
             .breadcrumb li:last-child a:hover {
-                background: #ffffff;
+                background: green;
                 }
             .breadcrumb li:last-child a:after {
-                border-left-color: #eff4f7;
+                border-left-color: #dfdcdc;
                 }
             .breadcrumb li:last-child a:hover:after {
-                border-left-color: #ffffff;
+                border-left-color: green;
                 }
             .breadcrumb li a:hover {
-                background: #eef3f6;
+                background: green;
                 }
             .breadcrumb li a:hover:after {
-            border-left-color: #eef3f6;
+            border-left-color: green;
             }
 
             input[type='checkbox'] {
                  display: none; 
                 }
+
+
+
+                
            .wrap-collabsible {
                 margin: 1.2rem 0;
              } 
             .lbl-toggle {
               display: block; 
-                padding: 1rem;
+                padding: 0.2rem;
                 color: #DDD;
                 background: #474849; 
                 cursor: pointer;
-                border-radius: 7px;
+                border-radius: 4px;
                     transition: all 0.25s ease-out; 
                 } 
             .lbl-toggle:hover { 
@@ -176,23 +182,52 @@
                 transition: max-height .25s ease-in-out;
                         } 
            .toggle:checked + .lbl-toggle + .collapsible-content {
-                    max-height: 350px; 
+                    max-height: 550px; 
                         } 
            .toggle:checked+.lbl-toggle { 
                         border-bottom-right-radius: 0; 
                        border-bottom-left-radius: 0;
                             }
-                            .collapsible-content .content-inner {
-                                background: rgba(0, 105, 255, .2);
-                                border-bottom: 1px solid rgba(0, 105, 255, .45); 
-                                border-bottom-left-radius: 7px; 
-                                border-bottom-right-radius: 7px;
-                                    padding: .5rem 1rem; 
-                                } 
-                                .collapsible-content p {
-                                        margin-bottom: 0;
-                                        }
+            .collapsible-content .content-inner {
+                background: rgba(0, 105, 255, .2);
+                border-bottom: 1px solid rgba(0, 105, 255, .45); 
+                border-bottom-left-radius: 7px; 
+                border-bottom-right-radius: 7px;
+                    padding: .5rem 1rem; 
+                } 
+                .collapsible-content p {
+                        margin-bottom: 0;
+                        }
 
+      
+    
+     .container {
+  width: 40px;
+  height: 50px;
+  position:relative;
+  background-color:rgb(110, 153, 187);
+}
+
+.corners {
+  width: 0; 
+  height: 0; 
+  border-top: 95px solid red;
+  border-bottom: 95px solid transparent;
+  border-right: 95px solid transparent;
+  
+}
+
+.corners span {
+  position:absolute;
+  top: 9px;
+  width: 100px;
+  left: 2px;
+  
+  font-size: 10px;
+  font-family: arial;
+  transform: rotate(-45deg);
+  display:block;
+}
 
     </style>
 </head>
@@ -210,7 +245,8 @@
     </div>
     <div class="row">
         <div class="column" style="width: 12.5%;"></div>
-        <div class="column" id="left" style="width:12.5%; padding-top: 70px;">
+        
+        <div class="column" id="left" style="width:12%; padding-top: 70px;">
             <b>Sort by</b><br />
             <form>
             <select>
@@ -251,6 +287,7 @@
 
           </form>
         </div>
+        <div class="column" style="width:0.5%;color: red;"></div>
         <div class="column" id="center" style="width:50%;"> 
 
             <div class="breadcrumb-wrap">
@@ -269,55 +306,120 @@
               <p><b>Flight 1:</b> perh, Austria(PER) to Brisberrin</p>
               <p style="color: rgb(34, 169, 231);">Listed priced include all travlers from Austria(BNE)<br /> to melbourne Australia and return</p>
 
+             
               <div class="wrap-collabsible"> 
                 <input id="collapsible2" class="toggle" type="checkbox" checked=""> 
                 <label for="collapsible2" class="lbl-toggle">
-                    <div class="breadcrumb-wrap">
-                        <ul class="breadcrumb">
-                          <li><a href="#" ><i class="fa fa-home"></i></a></li>
-                          <li><a href="#"><span style="color: #04AA6D;content: \2713;">&#10003;</span>TICKETS</a></li>
-                          <li><a href="#"><i class="fa fa-plus"></i>EXTRAS</a></li>
-                          <li><a href="#"><i class="fa fa-plane"></i>FLIGHTS</a></li>
-                          <li><a href="#"><i class="fa fa-hotel"></i>HOTELS</a></li>
-        
-                        </ul>
-                      </div>
+                   <div>
+                    <p>
+                      <span style="width: 96.66%;margin-right: 52px;">VA467</span> <span style="width: 16.66%;margin-right: 52px;">SAT 1,Jan</span>
+                      <span style="width: 16.66%;margin-right: 52px;">Depart</span><span style="width: 16.66%;margin-right: 52px;">7h 45m</span><span style="width: 16.66%;">Arrive (MEL)</span>
+                      <span style="width: 16.66%;margin-left: 30px;color:red;border-left: 2px solid blue;height: 302px;
+                      background-color: yellow;">91.0$</span>
+                    </p>
+                   </div>
                 </label>
                 <div class="collapsible-content">
-                    <div class="content-inner">
-                        
-                            <div style="float: left;">
-                                <b>Saturday, 1st Jan 2022</b>
-                                <p>10:30 am per Austraia</p>
-                                <p>ber</p>
-                                <p>Terminal</p>
+                    <div class="content-inner" style="height: 400px;">
+                           <div style="height: 50%;">
+                            <div style="float: left;width: 15%;">
+                                
+                                <div class="container">
+                                    <div class="corners"><span>Refundable</span></div>
+                                    
+                                  </div>
+                                  <div style="padding-top: 35px;" >
+                                      <p style="color: rgb(63, 151, 151);">PER</p>
+                                      <b>VA467</b>
+                                     
+
+                                  </div>
                             </div>
-                            <div style="float: left;">
-                                <b>AirCraft Type</b>
+                            <div style="float: left;width: 0.7%;"></div>
+                            <div style="float: left;width: 28.3%; padding-left: 4.1px;">
+                                <b>SAT 1,JAN</b>
+                                <p>10:30 PM Austria</p>
+                                <p>PER</p>
+                                <p>Terminal 1</p>
                             </div>
-                            <div >
-                                <b>Meals</b>
+                            <div style="float: left;width: 28%;">
+                               <b> AirCraft Type </b>
+                               <p>10:30 PM Austria</p>
+                                <p>PER</p>
+                                
                             </div>
-        
-                        
-                      </div>
-                  </div>
-              </div>
-              <div class="wrap-collabsible"> 
-                <input id="collapsible2" class="toggle" type="checkbox" checked=""> 
-                <label for="collapsible2" class="lbl-toggle">Even More Info</label>
-                <div class="collapsible-content">
-                    <div class="content-inner">
-                        <p> Bacon ipsum dolor amet pork belly capicola ground round brisket. 
-                            Shank pork belly cupim fatback. Flank porchetta chicken spare ribs. 
-                            Ham prosciutto pork belly turkey beef picanha strip steak swine alcatra.
-                          </p>
+                            <div style="float: left;width: 28%;">
+                                <b>Meals </b>
+                            </div>
+                            
+                        </div>
+                        <div style="color: rgb(103, 199, 199);text-align: center;">
+                            View fare rules
+                        </div>
+                        <div style="height: 50%;">
+                            <div style="float: left;width: 15%;">
+                                
+                                <div class="container">
+                                    <div class="corners"><span>Refundable</span></div>
+                                  </div>
+                                  <div style="padding-top: 35px;" >
+                                      <p style="color: rgb(63, 151, 151);">PER</p>
+                                      <b>VA467</b>
+                                     
+
+                                  </div>
+                            </div>
+                            <div style="float: left;width: 0.7%;"></div>
+                            <div style="float: left;width: 28.3%; padding-left: 4.1px;padding-top: 40px;">
+                                <b>SAT 1,JAN</b>
+                                <p>10:30 PM Austria</p>
+                                <p>PER</p>
+                                <p>Terminal 1</p>
+                            </div>
+                            <div style="float: left;width: 28%;padding-top: 20px;">
+                               <b> Cabin Class </b>
+                               <p>Economy</p>
+                               
+                                
+                            </div>
+                            <div style="float: left;width: 28%;">
+                                <b>In Booking </b>
+                                <p>Non Smoking</p>
+                            </div>
+                        </div>
+                        <div style="color: rgb(199, 103, 143);text-align: center;">
+                            View fare rules
+                        </div>
+                        <button>Select</button>
+                        <!-- <div style="height:50%;">
+                            <div style="width: 15%;"></div>
+                            <div style="float: left;width: 28.3%; padding-left: 4.1px;">
+                                <b>Mon 1,JAN</b>
+                                <p>10:30 PM Austria</p>
+                                <p>PER</p>
+                                <p>Terminal 1</p>
+                            </div>
+                            <div style="float: left;width: 28%;">
+                               <b> Cabin class </b>
+                               <p>Economy</p>
+                            
+                                
+                            </div>
+                            <div style="float: left;width: 28%;">
+                                <b>Meals </b>
+                                <p>Non Smoking</p>
+                            </div>
+                        </div> -->
+                        <div>
+
+                        </div>
                       </div>
                   </div>
               </div>
         
         </div>
-        <div class="column" id="right" style="width:12.5%;">
+        <div class="column" style="width: 1%;"></div>
+        <div class="column" id="right" style="width:11.5%;">
              <b style="float: right;margin-top: 12px;"><i class="fa fa-refresh"></i>Restart Booking</b>
              <div style="margin-top: 50px;">
             <b>Booking Summary</b><br />
@@ -344,7 +446,7 @@
                     
                     <div style="height: 25px;">
                         <div style="float: left;"><b>Sub Total</b></div>
-                        <div style="float: right;"><b >$50.00</b></div>
+                        <div style="float: right;"><b >$100.00</b></div>
                         
                        </div>
                 </div>
