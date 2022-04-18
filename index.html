@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Tasa Webpage</title>
+    <style>
+        .header{
+            padding-left: 250px;
+            padding-right: 250px;
+            padding-top: 20px;
+            background-color: #28286b;
+            height: 40px;
+        
+        }
+        .corner{
+            border-radius: 25px;
+            border: 2px solid white;
+            padding:5px;
+            width: 200;
+            height: 10px;
+            
+        }
+        span{
+            margin-left: 10px;
+            color:white;
+        }
+       a:hover{
+           text-decoration: underline;
+           
+       }
+       .column{
+           background-color: #f2f3f5;
+           float: left;
+           height: 790px;
+           
+       }
+       #left{
+           padding-left: 0px;
+           padding-top: 20px;
+       }
+       .card {
+            background-color: white;
+            margin-top: 12px;
+            border-radius: 5px;
+            border: 2px solid rgb(224, 221, 221);
+            padding:5px;
+            width: 200;
+            }
+        ul{
+            list-style: none;
+        }
+        li{
+            float: left;
+        }
+        li a{
+            display: block;
+        }
+     .active {
+            background-color: #04AA6D;
+            }
+
+                
+
+            .breadcrumb {
+                list-style: none;
+                overflow: hidden;
+                padding: 0;
+                margin: 12px;
+                
+            }
+            .breadcrumb li {
+                float: left;
+                }
+
+            .breadcrumb li a {
+                color: #8a6473;
+                text-decoration: none;
+                padding: 5px 0px 5px 40px;
+                background: #ffffff;
+                position: relative;
+                display: block;
+                float: left;
+                }
+            .breadcrumb li a:after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-top: 50px solid transparent;
+                border-bottom: 50px solid transparent;
+                border-left: 30px solid #ffffff;
+                position: absolute;
+                top: 50%;
+                margin-top: -50px;
+                left: 100%;
+                z-index: 2;
+                }
+
+            .breadcrumb li a:before {
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-top: 50px solid transparent;
+                border-bottom: 50px solid transparent;
+                border-left: 30px solid #d7dade;
+                position: absolute;
+                top: 50%;
+                margin-top: -50px;
+                margin-left: 2px;
+                left: 100%;
+                z-index: 1;
+                }
+
+            .breadcrumb li:first-child a {
+                padding-left: 20px;
+                }
+            
+            .breadcrumb li:last-child a {
+                background: #eff4f7;
+                color: #64768a;
+                cursor: default;
+                }
+            .breadcrumb li:last-child a:hover {
+                background: #ffffff;
+                }
+            .breadcrumb li:last-child a:after {
+                border-left-color: #eff4f7;
+                }
+            .breadcrumb li:last-child a:hover:after {
+                border-left-color: #ffffff;
+                }
+            .breadcrumb li a:hover {
+                background: #eef3f6;
+                }
+            .breadcrumb li a:hover:after {
+            border-left-color: #eef3f6;
+            }
+
+            input[type='checkbox'] {
+                 display: none; 
+                }
+           .wrap-collabsible {
+                margin: 1.2rem 0;
+             } 
+            .lbl-toggle {
+              display: block; 
+                padding: 1rem;
+                color: #DDD;
+                background: #474849; 
+                cursor: pointer;
+                border-radius: 7px;
+                    transition: all 0.25s ease-out; 
+                } 
+            .lbl-toggle:hover { 
+                color: #FFF; 
+            } 
+            .lbl-toggle::before {
+                content: ' ';
+                display: inline-block;
+                border-top: 5px solid transparent; 
+                border-bottom: 5px solid transparent; 
+                border-left: 5px solid currentColor;
+                vertical-align: middle;
+                margin-right: .7rem; 
+                transform: translateY(-2px);
+                transition: transform .2s ease-out; 
+                }
+            .toggle:checked+.lbl-toggle::before
+                { transform: rotate(90deg) translateX(-3px);
+                 } 
+            .collapsible-content {
+            max-height: 0px;
+                   overflow: hidden;
+                transition: max-height .25s ease-in-out;
+                        } 
+           .toggle:checked + .lbl-toggle + .collapsible-content {
+                    max-height: 350px; 
+                        } 
+           .toggle:checked+.lbl-toggle { 
+                        border-bottom-right-radius: 0; 
+                       border-bottom-left-radius: 0;
+                            }
+                            .collapsible-content .content-inner {
+                                background: rgba(0, 105, 255, .2);
+                                border-bottom: 1px solid rgba(0, 105, 255, .45); 
+                                border-bottom-left-radius: 7px; 
+                                border-bottom-right-radius: 7px;
+                                    padding: .5rem 1rem; 
+                                } 
+                                .collapsible-content p {
+                                        margin-bottom: 0;
+                                        }
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+           <div class="header-left" style="float: left;">
+               <img src="navlogo.PNG"/><span style="height: 20px;"><a href="#" style="text-decoration: none;color:#04AA6D;"> Package builder</a></a></span>
+            </div>
+            <div class="header-right" style="float: right;">
+                <span class="corner"><span>Need help? <a href="#" style="color: white;">Contact us</a></span></span>
+                <span><a href="#" style="text-decoration: none;color: white;">Log In</a></span>
+                <span><a href="#" style="text-decoration: none;color: white;">Sign Up</a></span>
+
+            </div>
+    </div>
+    <div class="row">
+        <div class="column" style="width: 12.5%;"></div>
+        <div class="column" id="left" style="width:12.5%; padding-top: 70px;">
+            <b>Sort by</b><br />
+            <form>
+            <select>
+                <option>Lowest to Highest</option>
+                <option>Highest to Lowest</option>
+            </select>
+            <hr/>
+            <b>Stops</b><br />
+            <input type="radio" value="Direct" id="direct"/>
+            <label for="direct">Direct</label><br />
+            <input type="radio" value="1 Stop" id="1">
+            <label for="1">1 Stop</label><br />
+            <input type="radio" value="2+ Stops" id="2"/>
+            <label for="2">2+ Stops</label><hr />
+
+            <b>Preffered Airlines</b><br />
+            <input type="checkbox" />
+            <label>Virgin Austria</label><br />
+            <input type="checkbox" />
+            <label>Quantus Airways</label><hr />
+
+            <b>Departure Time -Perh, Australia (PER)</b><br />
+            <input type="radio" value="Direct"/>
+            <label>Direct</label><br />
+            <input type="radio" value="1 Stop"/>
+            <label>1 Stop</label><br />
+            <input type="radio" value="2+ Stops"/>
+            <label>2+ Stops</label><hr />
+
+            <b>Arrival Time</b><br />
+            <input type="radio" value="Direct"/>
+            <label>Direct</label><br />
+            <input type="radio" value="1 Stop"/>
+            <label>1 Stop</label><br />
+            <input type="radio" value="2+ Stops"/>
+            <label>2+ Stops</label><hr />
+
+
+          </form>
+        </div>
+        <div class="column" id="center" style="width:50%;"> 
+
+            <div class="breadcrumb-wrap">
+                <ul class="breadcrumb">
+                  <li><a href="#"><i class="fa fa-home"></i></a></li>
+                  <li><a href="#"><span style="color: #04AA6D;content: \2713;">&#10003;</span>TICKETS</a></li>
+                  <li><a href="#"><i class="fa fa-plus"></i>EXTRAS</a></li>
+                  <li><a href="#"><i class="fa fa-plane"></i>FLIGHTS</a></li>
+                  <li><a href="#"><i class="fa fa-hotel"></i>HOTELS</a></li>
+
+                </ul>
+              </div>
+              <p><b><div><div style="float: left;">Choose your preferred flight</div></b></p>
+                <div style="float: right;padding-right: 15px;"><span style="color:rgb(34, 169, 231);"><i class="fa fa-search"></i>Modify Search</span></div>
+            </div>
+              <p><b>Flight 1:</b> perh, Austria(PER) to Brisberrin</p>
+              <p style="color: rgb(34, 169, 231);">Listed priced include all travlers from Austria(BNE)<br /> to melbourne Australia and return</p>
+
+              <div class="wrap-collabsible"> 
+                <input id="collapsible2" class="toggle" type="checkbox" checked=""> 
+                <label for="collapsible2" class="lbl-toggle">
+                    <div class="breadcrumb-wrap">
+                        <ul class="breadcrumb">
+                          <li><a href="#" ><i class="fa fa-home"></i></a></li>
+                          <li><a href="#"><span style="color: #04AA6D;content: \2713;">&#10003;</span>TICKETS</a></li>
+                          <li><a href="#"><i class="fa fa-plus"></i>EXTRAS</a></li>
+                          <li><a href="#"><i class="fa fa-plane"></i>FLIGHTS</a></li>
+                          <li><a href="#"><i class="fa fa-hotel"></i>HOTELS</a></li>
+        
+                        </ul>
+                      </div>
+                </label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        
+                            <div style="float: left;">
+                                <b>Saturday, 1st Jan 2022</b>
+                                <p>10:30 am per Austraia</p>
+                                <p>ber</p>
+                                <p>Terminal</p>
+                            </div>
+                            <div style="float: left;">
+                                <b>AirCraft Type</b>
+                            </div>
+                            <div >
+                                <b>Meals</b>
+                            </div>
+        
+                        
+                      </div>
+                  </div>
+              </div>
+              <div class="wrap-collabsible"> 
+                <input id="collapsible2" class="toggle" type="checkbox" checked=""> 
+                <label for="collapsible2" class="lbl-toggle">Even More Info</label>
+                <div class="collapsible-content">
+                    <div class="content-inner">
+                        <p> Bacon ipsum dolor amet pork belly capicola ground round brisket. 
+                            Shank pork belly cupim fatback. Flank porchetta chicken spare ribs. 
+                            Ham prosciutto pork belly turkey beef picanha strip steak swine alcatra.
+                          </p>
+                      </div>
+                  </div>
+              </div>
+        
+        </div>
+        <div class="column" id="right" style="width:12.5%;">
+             <b style="float: right;margin-top: 12px;"><i class="fa fa-refresh"></i>Restart Booking</b>
+             <div style="margin-top: 50px;">
+            <b>Booking Summary</b><br />
+            <div class="row1">  
+                  <div class="card">
+                    <p><b>DAY1-18 JANUARY</b></p>
+                    <p>1X Lower on Court</p>
+                    <div style="height: 25px;">
+                    <div style="float: left;">1Xt</div>
+                    <div style="float: right;"><b >$50.00</b></div>
+                    
+                   </div>
+                </div>
+                <div class="card">
+                    <p><b>Ground Pass</b></p>
+                    <p>Some text</p>
+                    <div style="height: 25px;">
+                        <div style="float: left;">1Xt</div>
+                        <div style="float: right;"><b >$50.00</b></div>
+                        
+                    </div>
+                </div>
+                <div class="card">
+                    
+                    <div style="height: 25px;">
+                        <div style="float: left;"><b>Sub Total</b></div>
+                        <div style="float: right;"><b >$50.00</b></div>
+                        
+                       </div>
+                </div>
+
+
+
+                
+            </div>
+        </div>
+           
+        </div>
+        <div class="column" style="width: 12.5%;"></div>
+
+
+    </div>
+</body>
+</html>
