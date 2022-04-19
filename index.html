@@ -32,7 +32,7 @@
        .column{
            background-color: #f2f3f5;
            float: left;
-           height: 790px;
+           height: 990px;
            
        }
        #left{
@@ -76,10 +76,11 @@
             .breadcrumb li a {
                 color: #64768a;
                 text-decoration: none;
-                padding: 5px 0px 5px 40px;
+                padding: 2px 0px 2px 40px;
                 background: #dcdfdd;
                 position: relative;
                 display: block;
+                height: 20px;
                 float: left;
                 }
             .breadcrumb li a:after {
@@ -89,13 +90,20 @@
                 height: 0;
                 border-top: 50px solid transparent;
                 border-bottom: 50px solid transparent;
-                border-left: 30px solid #dcdfdd;
+                border-left: 30px solid #dfdcde;
                 position: absolute;
                 top: 50%;
                 margin-top: -50px;
                 left: 100%;
                 z-index: 2;
                 }
+
+            
+            .breadcrumb li:first-child a:after{
+               border-left: 30px solid green;
+            }
+            
+            /*//////////////////////////////*/
 
             .breadcrumb li a:before {
                 content: "";
@@ -112,11 +120,14 @@
                 left: 100%;
                 z-index: 1;
                 }
-
+            
             .breadcrumb li:first-child a {
                 padding-left: 20px;
-               
+                background: green;
+                color: white;
                 }
+
+           
             
             
             .breadcrumb li:last-child a {
@@ -126,18 +137,22 @@
                 }
             .breadcrumb li:last-child a:hover {
                 background: green;
+                color: white;
                 }
             .breadcrumb li:last-child a:after {
                 border-left-color: #dfdcdc;
                 }
             .breadcrumb li:last-child a:hover:after {
                 border-left-color: green;
+                color: white;
                 }
             .breadcrumb li a:hover {
                 background: green;
+                color: white;
                 }
             .breadcrumb li a:hover:after {
             border-left-color: green;
+            color: white;
             }
 
             input[type='checkbox'] {
@@ -214,7 +229,12 @@
   border-top: 95px solid red;
   border-bottom: 95px solid transparent;
   border-right: 95px solid transparent;
+ 
   
+}
+.corner:after{
+    border-top-right-radius: 30%;
+    color:tomato;
 }
 
 .corners span {
@@ -228,6 +248,7 @@
   transform: rotate(-45deg);
   display:block;
 }
+
 
     </style>
 </head>
@@ -292,11 +313,13 @@
 
             <div class="breadcrumb-wrap">
                 <ul class="breadcrumb">
-                  <li><a href="#"><i class="fa fa-home"></i></a></li>
-                  <li><a href="#"><span style="color: #04AA6D;content: \2713;">&#10003;</span>TICKETS</a></li>
+                  <li><a href="#" ><i class="fa fa-home"></i></a></li>
+                  <li><a href="#"><span style="color: #8b8686;content: \2713;">&#10003;</span>TICKETS</a></li>
                   <li><a href="#"><i class="fa fa-plus"></i>EXTRAS</a></li>
                   <li><a href="#"><i class="fa fa-plane"></i>FLIGHTS</a></li>
                   <li><a href="#"><i class="fa fa-hotel"></i>HOTELS</a></li>
+                 
+                 
 
                 </ul>
               </div>
@@ -313,8 +336,11 @@
                    <div>
                     <p>
                       <span style="width: 96.66%;margin-right: 52px;">VA467</span> <span style="width: 16.66%;margin-right: 52px;">SAT 1,Jan</span>
-                      <span style="width: 16.66%;margin-right: 52px;">Depart</span><span style="width: 16.66%;margin-right: 52px;">7h 45m</span><span style="width: 16.66%;">Arrive (MEL)</span>
-                      <span style="width: 16.66%;margin-left: 30px;color:red;border-left: 2px solid blue;height: 302px;
+                      <span style="width: 16.66%;margin-right: 52px;">Depart</span>
+                      <span style="width: 16.66%;margin-right: 52px;
+                      ">7h 45m</span>
+                      <span style="width: 16.66%;">Arrive (MEL)</span>
+                      <span style="width: 16.66%;margin-left: 30px;color:red;border-left: 2px solid blue;height: 100%;
                       background-color: yellow;">91.0$</span>
                     </p>
                    </div>
@@ -324,11 +350,12 @@
                            <div style="height: 50%;">
                             <div style="float: left;width: 15%;">
                                 
-                                <div class="container">
+                                <div class="container" style="position: relative;left:-15px;top: -7.5px;">
                                     <div class="corners"><span>Refundable</span></div>
                                     
+                                    
                                   </div>
-                                  <div style="padding-top: 35px;" >
+                                  <div style="padding-top: 55px;" >
                                       <p style="color: rgb(63, 151, 151);">PER</p>
                                       <b>VA467</b>
                                      
@@ -356,13 +383,13 @@
                         <div style="color: rgb(103, 199, 199);text-align: center;">
                             View fare rules
                         </div>
-                        <div style="height: 50%;">
+                        <div style="height: 40%;">
                             <div style="float: left;width: 15%;">
                                 
-                                <div class="container">
+                                <div class="container" style="position: relative;top:-2px;left:-15px;">
                                     <div class="corners"><span>Refundable</span></div>
                                   </div>
-                                  <div style="padding-top: 35px;" >
+                                  <div style="padding-top: 45px;" >
                                       <p style="color: rgb(63, 151, 151);">PER</p>
                                       <b>VA467</b>
                                      
@@ -387,35 +414,32 @@
                                 <p>Non Smoking</p>
                             </div>
                         </div>
-                        <div style="color: rgb(199, 103, 143);text-align: center;">
-                            View fare rules
+                        <div style="align-items: center;position: relative;padding-left:302px;">
+                            <span style="margin-right: 100px;color: rgb(103, 199, 199)">View fare rules</span>
+                            <button class="button button3" style="background-color: #509dd1;
+                            border: none;
+                            color: white;
+                            padding: 6px;
+                            padding-left: 50px;
+                            padding-right: 50px;
+                            align-items: right;
+                            text-decoration: none;
+                            display: inline-block;
+                            margin: 2px 1px;
+                            cursor: pointer;
+                            border-radius: 12px;
+                            position: absolute;">Select</button>
                         </div>
-                        <button>Select</button>
-                        <!-- <div style="height:50%;">
-                            <div style="width: 15%;"></div>
-                            <div style="float: left;width: 28.3%; padding-left: 4.1px;">
-                                <b>Mon 1,JAN</b>
-                                <p>10:30 PM Austria</p>
-                                <p>PER</p>
-                                <p>Terminal 1</p>
-                            </div>
-                            <div style="float: left;width: 28%;">
-                               <b> Cabin class </b>
-                               <p>Economy</p>
-                            
-                                
-                            </div>
-                            <div style="float: left;width: 28%;">
-                                <b>Meals </b>
-                                <p>Non Smoking</p>
-                            </div>
-                        </div> -->
+                        
+                      
                         <div>
 
                         </div>
                       </div>
                   </div>
               </div>
+
+              
         
         </div>
         <div class="column" style="width: 1%;"></div>
@@ -425,7 +449,7 @@
             <b>Booking Summary</b><br />
             <div class="row1">  
                   <div class="card">
-                    <p><b>DAY1-18 JANUARY</b></p>
+                    <p style="margin-top: 40px;"><b>DAY1-18 JANUARY</b></p>
                     <p>1X Lower on Court</p>
                     <div style="height: 25px;">
                     <div style="float: left;">1Xt</div>
