@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--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-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Tasa Webpage</title>
@@ -169,27 +170,29 @@
               display: block; 
                 padding: 0.2rem;
                 color: black;
-                background: #fdfeff; 
+                font-style: bold;
+                background: #474849; 
                 cursor: pointer;
                 border-radius: 4px;
                     transition: all 0.25s ease-out; 
                 } 
             .lbl-toggle:hover { 
-                color: #FFF; 
+                color: black; 
             } 
             .lbl-toggle::before {
-                content: ' ';
+                font-family: FontAwesome;
+                content: "\f107";
                 display: inline-block;
-                border-top: 5px solid transparent; 
-                border-bottom: 5px solid transparent; 
-                border-left: 5px solid currentColor;
+                margin-right: 10px;
+                margin-top: 5px;
+                margin-bottom: 10px;
+                font-size: 1em;
+                line-height: 1.556em;
                 vertical-align: middle;
-                margin-right: .7rem; 
-                transform: translateY(-2px);
-                transition: transform .2s ease-out; 
+                transition: 0.4s;
                 }
             .toggle:checked+.lbl-toggle::before
-                { transform: rotate(90deg) translateX(-3px);
+                { transform: rotate(180deg) translateX(-3px);
                  } 
             .collapsible-content {
             max-height: 0px;
@@ -249,13 +252,29 @@
   display:block;
 }
 
+.wrap-collabsible span{
+    color: black;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: rgb(104, 21, 21);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+
+p,b,span{
+    font-size: small;
+}
 
     </style>
 </head>
 <body>
-    <div class="header">
+    <div class="header" style="width: 62.5%;">
            <div class="header-left" style="float: left;">
-               <img src="navlogo.PNG"/><span style="height: 20px;"><a href="#" style="text-decoration: none;color:#04AA6D;"> Package builder</a></a></span>
+               <img src="navlogo.PNG"/><span style="height: 20px;"><a class="na" href="#" style="text-decoration: none;color:#04AA6D;"> Package builder</a></a></span>
             </div>
             <div class="header-right" style="float: right;">
                 <span class="corner"><span>Need help? <a href="#" style="color: white;">Contact us</a></span></span>
@@ -267,10 +286,10 @@
     <div class="row">
         <div class="column" style="width: 12.5%;"></div>
         
-        <div class="column" id="left" style="width:12%; padding-top: 70px;">
+        <div class="column" id="left" style="width:12%; padding-top: 140px;">
             <b>Sort by</b><br />
             <form>
-            <select>
+            <select style="background-color: #dfdcdc;">
                 <option>Lowest to Highest</option>
                 <option>Highest to Lowest</option>
             </select>
@@ -314,44 +333,58 @@
             <div class="breadcrumb-wrap">
                 <ul class="breadcrumb">
                   <li><a href="#" ><i class="fa fa-home"></i></a></li>
-                  <li><a href="#"><span style="color: #8b8686;content: \2713;">&#10003;</span>TICKETS</a></li>
-                  <li><a href="#"><i class="fa fa-plus"></i>EXTRAS</a></li>
-                  <li><a href="#"><i class="fa fa-plane"></i>FLIGHTS</a></li>
-                  <li><a href="#"><i class="fa fa-hotel"></i>HOTELS</a></li>
+                  <li><a href="#"><span style="color: #8b8686;content: \2713;margin-right: 3px;">&#10003;</span>TICKETS</a></li>
+                  <li><a href="#"><i class="fa fa-plus" style="margin-right: 4px;"></i>EXTRAS</a></li>
+                  <li><a href="#"><i class="fa fa-plane" style="margin-right: 4px;"></i>FLIGHTS</a></li>
+                  <li><a href="#"><i class="fa fa-hotel" style="margin-right: 4px;"></i>HOTELS</a></li>
+                  
                  
                  
 
                 </ul>
               </div>
               <p><b><div><div style="float: left;">Choose your preferred flight</div></b></p>
-                <div style="float: right;padding-right: 15px;"><span style="color:rgb(34, 169, 231);"><i class="fa fa-search"></i>Modify Search</span></div>
-            </div>
+                <div style="float: right;padding-right: 15px;"><span style="color:rgb(34, 169, 231);"><i class="fa fa-search" style="margin-right: 3px;"></i>Modify Search</span></div>
+            </div><br />
               <p><b>Flight 1:</b> perh, Austria(PER) to Brisberrin</p>
               <p style="color: rgb(34, 169, 231);">Listed priced include all travlers from Austria(BNE)<br /> to melbourne Australia and return</p>
 
              
               <div class="wrap-collabsible"> 
-                <input id="collapsible2" class="toggle" type="checkbox" checked=""> 
-                <label for="collapsible2" class="lbl-toggle">
-                   <div>
-                    <p class="collapse">
-                      <span style="width: 96.66%;margin-right: 52px; color:black;">VA467</span> <span style="width: 16.66%;margin-right: 52px;color:black;">SAT 1,Jan</span>
-                      <span style="width: 16.66%;margin-right: 52px;color:black;">Depart</span>
-                      <span style="width: 16.66%;margin-right: 52px;color:black;
-                      ">7h 45m</span>
-                      <span style="width: 16.66%;color:black;">Arrive (MEL)</span>
-                      <span style="width: 16.66%;margin-left: 30px;color:red;border-left: 2px solid blue;height: 100%;
-                      background-color: rgb(85, 85, 79);color:black;">91.0$</span>
-                    </p>
-                   </div>
+                <input id="collapsible2" class="toggle" type="checkbox" checked> 
+                <label for="collapsible2" class="lbl-toggle" style="background-color: white;position: relative;border: 1px solid #dfdcdc;">
+                  
+                      <span style="width: 12.66%;display: inline-block;">VA467</span> 
+                      <span style="width: 12.66%;display: inline-block;">SAT 1,Jan</span>
+
+                      <span style="width: 12.66%;display: inline-block;">Depart</span>
+                      <span class="tri" style="width: 12.66%;display: inline-block;background-color: #dfdcdc;
+                      padding-top: 15px;padding-bottom: 15px;padding-left: 10px;
+                      ">
+                        7h<br /> 
+                        45m
+                      </span>
+                      <span style="width: 15.66%;display: inline-block;">Arrive MEL</span>
+                      <span style="width: 12.66%;display: inline-block;border-left: 2px dashed black;position:absolute;height: 43px;
+                      padding-top: 25px;padding-left: 25px;color: red;"><b>91.0$</b></span>
+
+                      
+                      <!-- <span style="height: 100%;width: 16.66%;display: inline-block;color:red;border-left: 2px solid blue;
+                      background-color: rgb(85, 85, 79);display: inline-block;">91.0$</span> -->
+                    
+                  
                 </label>
-                <div class="collapsible-content">
+                <div class="collapsible-content" style="margin-bottom: 3px;"> 
                     <div class="content-inner" style="height: 400px;">
                            <div style="height: 50%;">
                             <div style="float: left;width: 15%;">
                                 
                                 <div class="container" style="position: relative;left:-15px;top: -7.5px;">
-                                    <div class="corners"><span>Refundable</span></div>
+                                    <div class="corners">
+                                        <span>Refundable</span>
+                                      
+                                        
+                                    </div>
                                     
                                     
                                   </div>
@@ -362,7 +395,43 @@
 
                                   </div>
                             </div>
-                            <div style="float: left;width: 0.7%;"></div>
+                            <!--########################-->
+                            <div style="float: left;width: 0.7%;margin-left: -12px;">
+                                <div class="vl" style="border-left: 12px solid lightblue;
+                                height: 13px;
+                                width: 1px;
+                                position: relative;
+                                transform: rotate(60deg);
+                                margin-top: -13px;
+                                margin-left: -11px;
+                                margin-bottom: -3px;
+                                top: 0;
+                                z-index: 2;">
+                                </div>
+                                <span class="dot" style="margin-left: -15px;margin-top: 62px;"></span>
+                                <div class="vl" style="border-left: 2px solid rgb(125, 129, 125);
+                                height: 100px;
+                                
+                                margin-top: -3px;
+                                margin-left: -11px;
+                                margin-bottom: -3px;
+                                top: 0;">
+                                </div>
+                                <span class="dot" style="margin-left: -15px;margin-top: -52px;"></span>
+
+                                <div class="vl" style="border-left: 12px solid lightblue;
+                                height: 13px;
+                                width: 1px;
+                                position: relative;
+                                transform: rotate(50deg);
+                                margin-top: -103px;
+                                margin-left: -105px;
+                                margin-bottom: -3px;
+                                top: 0;
+                                z-index: 2;">
+                                </div>
+                            </div>
+                            
                             <div style="float: left;width: 28.3%; padding-left: 4.1px;">
                                 <b>SAT 1,JAN</b>
                                 <p>10:30 PM Austria</p>
@@ -378,12 +447,53 @@
                             <div style="float: left;width: 28%;">
                                 <b>Meals </b>
                             </div>
-                            
+                                
                         </div>
-                        <div style="color: rgb(103, 199, 199);text-align: center;">
-                            View fare rules
+                        <div style="height:30%">
+                            <div style="width:17.7%;float: left;margin-left: 260px;"></div>
+
+                            <div style="float: left;width: 28.3%; padding-left: 4.1px;padding-top: 20px;margin-left: 90px;margin-top: -62px;">
+                                <b>SAT 1,JAN</b>
+                                <p>10:30 PM Austria</p>
+                                <p>PER</p>
+                                <p>Terminal 1</p>
+                            </div>
+                            <div style="float: left;width: 28%;margin-top: -32px;padding-top:1px ;">
+                                <b> Cabin Class </b>
+                                <p>Economy</p>
+                                
+                                 
+                             </div>
+                             <div style="float: left;width: 28%;margin-top: -52px;">
+                                 <b>In Booking </b>
+                                 <p>Non Smoking</p>
+                             </div>
+                           
+
                         </div>
-                        <div style="height: 40%;">
+                        <div style="align-items: center;position: relative;padding-left:302px;">
+                            <span style="margin-right: 100px;color: rgb(103, 199, 199)">View fare rules</span>
+                            <button class="button button3" style="background-color: #509dd1;
+                            border: none;
+                            color: white;
+                            padding: 6px;
+                            padding-left: 29px;
+                            padding-right: 29px;
+                            align-items: right;
+                            text-decoration: none;
+                            display: inline-block;
+                            margin: 2px 9px;
+                            cursor: pointer;
+                            border-radius: 12px;
+                            position: absolute;">Select</button>
+
+                        </div>
+                        <div>
+                            <p>All flights are subject to the last minute. Seating and confiuguation blaw blaw
+                            </p>
+                        </div>
+                       
+                        <!-- <div style="height: 40%;">
                             <div style="float: left;width: 15%;">
                                 
                                 <div class="container" style="position: relative;top:-2px;left:-15px;">
@@ -413,30 +523,34 @@
                                 <b>In Booking </b>
                                 <p>Non Smoking</p>
                             </div>
-                        </div>
+                        </div> 
                         <div style="align-items: center;position: relative;padding-left:302px;">
                             <span style="margin-right: 100px;color: rgb(103, 199, 199)">View fare rules</span>
                             <button class="button button3" style="background-color: #509dd1;
                             border: none;
                             color: white;
                             padding: 6px;
-                            padding-left: 50px;
-                            padding-right: 50px;
+                            padding-left: 29px;
+                            padding-right: 29px;
                             align-items: right;
                             text-decoration: none;
                             display: inline-block;
-                            margin: 2px 1px;
+                            margin: 2px 9px;
                             cursor: pointer;
                             border-radius: 12px;
                             position: absolute;">Select</button>
-                        </div>
+                        </div>-->
                         
                       
                         <div>
 
                         </div>
+                        <!--part 2-->
+                        
                       </div>
                   </div>
+                  <!-- kjsldfjlksdjf-->
+                  
               </div>
 
               
@@ -444,12 +558,12 @@
         </div>
         <div class="column" style="width: 1%;"></div>
         <div class="column" id="right" style="width:11.5%;">
-             <b style="float: right;margin-top: 12px;"><i class="fa fa-refresh"></i>Restart Booking</b>
-             <div style="margin-top: 50px;">
+             <b style="float: right;margin-top: 12px;color:#509dd1"><i class="fa fa-refresh" style="margin-right: 4px;"></i>Restart Booking</b>
+             <div style="margin-top: 90px;padding-top: 53px;">
             <b>Booking Summary</b><br />
             <div class="row1">  
-                  <div class="card">
-                    <p style="margin-top: 40px;"><b>DAY1-18 JANUARY</b></p>
+                  <div class="card" style="padding-top: 0px;">
+                    <p style="margin-top: 40px;"><b>1-18 JANUARY</b></p>
                     <p>1X Lower on Court</p>
                     <div style="height: 25px;">
                     <div style="float: left;">1Xt</div>
@@ -457,7 +571,7 @@
                     
                    </div>
                 </div>
-                <div class="card">
+                <div class="card" style="padding-top: 0px;">
                     <p><b>Ground Pass</b></p>
                     <p>Some text</p>
                     <div style="height: 25px;">
@@ -466,7 +580,7 @@
                         
                     </div>
                 </div>
-                <div class="card">
+                <div class="card" style="padding-top: 0px;">
                     
                     <div style="height: 25px;">
                         <div style="float: left;"><b>Sub Total</b></div>
